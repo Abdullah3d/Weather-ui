@@ -1,21 +1,15 @@
-<div class="p-6 space-y-6">
+<div class="p-2 space-y-6">
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" style="height: 480px;">
-
-        <app-todo-list class="min-h-full"></app-todo-list>
-
-        <app-agenda class="min-h-full"></app-agenda>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <app-todo-list class="w-full min-h-[240px] lg:min-h-[480px]"></app-todo-list>
+        <app-agenda class="w-full min-h-[240px] lg:min-h-[480px]"></app-agenda>
     </div>
 
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <app-weather-card></app-weather-card>
-
-        <app-message></app-message>
-
-        <app-news></app-news>
-
-        <app-birthday></app-birthday>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <app-weather-card class="w-full"></app-weather-card>
+        <app-message class="w-full"></app-message>
+        <app-news class="w-full"></app-news>
+        <app-birthday class="w-full"></app-birthday>
     </div>
 
 </div>

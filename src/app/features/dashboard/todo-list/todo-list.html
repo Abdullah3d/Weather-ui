@@ -1,13 +1,18 @@
 <div class="bg-white p-4 rounded-lg shadow-md border border-gray-100 h-full flex flex-col">
-    <div class="relative flex items-center mb-4">
+
+    <!-- Header -->
+    <div class="relative flex flex-col sm:flex-row sm:items-center mb-4">
+
         <h3 class="font-semibold text-gray-800 text-lg">ToDo List</h3>
 
+        <!-- Name Badge -->
         <span
-            class="absolute left-1/2 transform -translate-x-1/2 text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-md border">
+            class="mt-2 sm:mt-0 sm:absolute sm:left-1/2 sm:-translate-x-1/2 text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-md border">
             Farukh Nurmatov
         </span>
 
-        <div class="ml-auto flex items-center space-x-3 text-gray-500">
+        <!-- Action Icons -->
+        <div class="ml-auto flex items-center space-x-3 text-gray-500 mt-2 sm:mt-0">
             <button class="hover:text-gray-700">
                 <i class="fa-solid fa-rotate text-base"></i>
             </button>
@@ -15,8 +20,10 @@
                 <i class="fas fa-ellipsis-h text-base"></i>
             </button>
         </div>
+
     </div>
 
+    <!-- Add Task -->
     <div class="flex items-center border-b border-gray-200 pb-3 mb-4">
         <button class="text-green-500 mr-3">
             <i class="fas fa-plus-circle fa-lg"></i>
@@ -26,6 +33,8 @@
             MEDIUM
         </div>
     </div>
+
+    <!-- Content -->
     <div class="space-y-3 text-sm flex-grow pr-1">
 
         <div class="flex items-start justify-between p-2 bg-gray-50 rounded-md">

@@ -1,13 +1,23 @@
 <div class="flex bg-gray-100">
-  <app-sidebar></app-sidebar>
+
+  <app-sidebar class="hidden md:block flex-shrink-0"></app-sidebar>
+
+  <div class="md:hidden fixed top-4 left-4 z-50">
+    <button class="bg-white p-2 rounded shadow">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </div>
 
   <div class="flex-grow flex flex-col overflow-y-auto">
 
-    <header class="shadow-sm sticky top-0 z-10 border-b border-gray-200">
+    <header class="shadow-sm sticky top-0 z-10 border-b border-gray-200 bg-white">
 
       <div class="bg-white flex justify-between items-center p-4 border-b border-gray-100">
-        <div class="text-2xl font-light text-gray-800">My Workspace</div>
-        <div class="flex items-center space-x-3 text-gray-400 text-lg">
+        <div class=" text-lg sm:text-xl lg:text-2xl font-light text-gray-800">
+          My Workspace
+        </div>
+
+        <div class="flex items-center space-x-3 text-gray-400 text-base sm:text-lg">
           <i class="far fa-clock"></i>
           <i class="fas fa-phone-alt"></i>
           <i class="far fa-envelope"></i>
@@ -15,71 +25,74 @@
         </div>
       </div>
 
-      <div class="p-8 bg-gray-50">
-        <div class="flex items-center space-x-4 mb-4 text-sm relative">
+      <div class="p-4 sm:p-6 lg:p-8 bg-gray-50">
+
+        <div class="flex flex-wrap items-center gap-4 mb-4 text-sm">
 
           <div class="flex items-center font-semibold text-blue-600 space-x-2">
             <span>Account Configuration</span>
             <span>20%</span>
           </div>
 
-          <div class="flex-grow bg-gray-200 rounded-full h-2 overflow-hidden shadow-inner">
+          <div class="flex-grow min-w-[150px] bg-gray-200 rounded-full h-2 overflow-hidden shadow-inner">
             <div class="h-full bg-blue-500 rounded-full transition-all duration-500 ease-in-out shadow-lg"
-              style="width: 20%;">
+                 style="width: 20%;">
             </div>
           </div>
 
           <div class="flex items-center text-gray-400 space-x-2">
             <div class="w-3 h-3 border-2 border-gray-400 rounded-full"></div>
-            <span>Company Setup</span>
+            <span class="text-xs sm:text-sm">Company Setup</span>
           </div>
 
           <div class="flex items-center text-gray-400 space-x-2">
             <div class="w-3 h-3 border-2 border-gray-400 rounded-full"></div>
-            <span>Invite User</span>
+            <span class="text-xs sm:text-sm">Invite User</span>
           </div>
 
           <div class="flex items-center text-gray-400 space-x-2">
             <div class="w-3 h-3 border-2 border-gray-400 rounded-full"></div>
-            <span>Update Your Profile</span>
+            <span class="text-xs sm:text-sm">Update Your Profile</span>
           </div>
 
           <div class="flex items-center text-green-500 font-medium space-x-1">
             <i class="fas fa-check-circle text-lg"></i>
-            <span class="text-gray-400 font-normal">Data Migration</span>
+            <span class="text-gray-400 font-normal text-xs sm:text-sm">Data Migration</span>
           </div>
 
           <div class="flex items-center text-gray-400 space-x-2">
             <div class="w-3 h-3 border-2 border-gray-400 rounded-full"></div>
-            <span>Configure E-mail</span>
+            <span class="text-xs sm:text-sm">Configure E-mail</span>
           </div>
 
-          <div class="text-gray-400 hover:text-gray-600 cursor-pointer flex-shrink-0 ml-4">
+          <div class="text-gray-400 hover:text-gray-600 cursor-pointer ml-auto sm:ml-4">
             <i class="fas fa-info-circle text-lg"></i>
           </div>
+
         </div>
 
-        <div class="flex justify-between items-center p-1 rounded border border-gray-100">
-          <p class="text-xs text-gray-600">
-            The first step is to set up your company's information, this is mostly used in printed business documents
-            like orders, quotations and invoices.
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 p-2 rounded border border-gray-100">
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+            The first step is to set up your company's information, this is mostly used
+            in printed business documents like orders, quotations and invoices.
           </p>
+
           <div class="flex space-x-3">
-            <button
-              class="bg-blue-500 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-600 transition-colors shadow-md">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-600 transition-colors shadow-md">
               Take me there
             </button>
-            <button
-              class="bg-gray-300 text-gray-700 px-4 py-2 rounded text-sm font-medium hover:bg-gray-400 transition-colors">
+            <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded text-sm font-medium hover:bg-gray-400 transition-colors">
               Skip
             </button>
           </div>
         </div>
+
       </div>
     </header>
-
+    
     <main class="flex-grow">
       <router-outlet></router-outlet>
     </main>
+
   </div>
 </div>

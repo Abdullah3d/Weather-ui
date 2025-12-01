@@ -1,22 +1,24 @@
 <div class="bg-white p-4 rounded-lg shadow-md border border-gray-100 h-full flex flex-col">
 
     <div class="relative flex items-center mb-4">
-        <h3 class="font-semibold text-gray-800 text-lg">My Agenda</h3>
+        <h3 class="font-semibold text-gray-800 text-base sm:text-lg">My Agenda</h3>
+
         <span
-            class="absolute left-1/2 transform -translate-x-1/2 text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-md border">
+            class="absolute left-1/2 -translate-x-1/2 text-xs sm:text-sm text-gray-600 bg-gray-100 px-2 sm:px-3 py-1 rounded-md border whitespace-nowrap">
             April-2018
         </span>
-        <div class="ml-auto flex items-center space-x-3 text-gray-500">
+
+        <div class="ml-auto flex items-center space-x-2 sm:space-x-3 text-gray-500">
             <button class="hover:text-gray-700">
-                <i class="fa-solid fa-rotate text-base"></i>
+                <i class="fa-solid fa-rotate text-sm sm:text-base"></i>
             </button>
             <button class="hover:text-gray-700">
-                <i class="fas fa-ellipsis-h text-base"></i>
+                <i class="fas fa-ellipsis-h text-sm sm:text-base"></i>
             </button>
         </div>
     </div>
 
-    <div class="grid grid-cols-7 text-center text-xs font-medium text-gray-400 mb-2">
+    <div class="grid grid-cols-7 text-center text-[10px] sm:text-xs font-medium text-gray-400 mb-2">
         <span>MON</span>
         <span>TUE</span>
         <span>WED</span>
@@ -26,16 +28,16 @@
         <span>SUN</span>
     </div>
 
-    <div class="grid grid-cols-7 text-center text-sm mb-4">
-
+    <div class="grid grid-cols-7 text-center text-xs sm:text-sm mb-4">
         <span class="text-gray-300 p-1">30</span>
         <span class="text-gray-300 p-1">31</span>
         <span class="p-1">1</span>
         <span class="p-1">2</span>
         <span class="p-1">3</span>
         <span class="p-1">4</span>
+
         <span
-            class="p-1 text-blue-600 font-semibold border border-blue-500 rounded-full w-7 h-7 flex items-center justify-center mx-auto shadow-sm">
+            class="p-1 text-blue-600 font-semibold border border-blue-500 rounded-full w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center mx-auto shadow-sm">
             5
         </span>
 
@@ -46,71 +48,75 @@
         <span class="p-1">10</span>
 
         <span
-            class="p-1 bg-blue-100 text-blue-600 rounded-full w-7 h-7 flex items-center justify-center mx-auto font-medium">
+            class="p-1 bg-blue-100 text-blue-600 rounded-full w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center mx-auto font-medium">
             11
         </span>
         <span class="p-1">12</span>
     </div>
+
     <div class="flex-grow space-y-4 overflow-y-auto pr-1">
 
         <div class="flex items-center border-b border-gray-200 pb-3">
-            <button class="text-green-500 mr-3">
-                <i class="fas fa-plus-circle fa-xl"></i>
+            <button class="text-green-500 mr-2 sm:mr-3">
+                <i class="fas fa-plus-circle text-lg sm:fa-xl"></i>
             </button>
 
-            <input type="text" class="flex-grow text-gray-700 outline-none text-sm"
+            <input type="text" class="flex-grow text-gray-700 outline-none text-xs sm:text-sm"
                 placeholder="A meeting, an event, or a phone call?" />
 
-            <div class="flex items-center text-xs text-gray-500 ml-3">
-                <span class="mr-3">00:00</span>
-                <button class="text-blue-500 border border-blue-500 px-3 py-1 rounded-md hover:bg-blue-50">
+            <div class="flex items-center text-[10px] sm:text-xs text-gray-500 ml-2 sm:ml-3">
+                <span class="mr-2 sm:mr-3">00:00</span>
+                <button class="text-blue-500 border border-blue-500 px-2 sm:px-3 py-1 rounded-md hover:bg-blue-50">
                     CALL
                 </button>
             </div>
         </div>
+
         <div class="flex justify-between items-start pl-1">
             <div class="flex items-start">
-                <input type="checkbox" class="form-checkbox h-4 w-4 mt-1 cursor-pointer" />
-                <div class="ml-3">
-                    <p class="text-gray-700 font-medium">Call Alex Polay</p>
-                    <span class="text-xs text-gray-500">+998 90 797 07 07</span><br>
-                    <span class="text-xs text-gray-500">Start 15:00 — End 16:00</span>
+                <input type="checkbox" class="form-checkbox h-3 w-3 sm:h-4 sm:w-4 mt-1" />
+                <div class="ml-2 sm:ml-3">
+                    <p class="text-gray-700 font-medium text-sm">Call Alex Polay</p>
+                    <span class="text-[10px] sm:text-xs text-gray-500">+998 90 797 07 07</span><br>
+                    <span class="text-[10px] sm:text-xs text-gray-500">Start 15:00 — End 16:00</span>
                 </div>
             </div>
 
-            <div class="flex items-center space-x-3">
+            <div class="flex items-center space-x-2 sm:space-x-3">
                 <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-                <span class="text-xs text-blue-600 bg-blue-100 px-3 py-1 rounded-full">CALL</span>
+                <span
+                    class="text-[10px] sm:text-xs text-blue-600 bg-blue-100 px-2 sm:px-3 py-1 rounded-full">CALL</span>
             </div>
         </div>
+
         <div class="flex justify-between items-start pl-1">
             <div class="flex items-start">
-                <input type="checkbox" class="form-checkbox h-4 w-4 mt-1 cursor-pointer" />
-                <div class="ml-3">
-                    <p class="text-gray-700 font-medium">Meeting Kpi Design Department</p>
-                    <span class="text-xs text-gray-500 block">Meeting Hall, Tashkent</span>
-                    <span class="text-xs text-gray-500">Start 15:00 — End 16:00</span>
+                <input type="checkbox" class="form-checkbox h-3 w-3 sm:h-4 sm:w-4 mt-1" />
+                <div class="ml-2 sm:ml-3">
+                    <p class="text-gray-700 font-medium text-sm">Meeting Kpi Design Department</p>
+                    <span class="text-[10px] sm:text-xs text-gray-500 block">Meeting Hall, Tashkent</span>
+                    <span class="text-[10px] sm:text-xs text-gray-500">Start 15:00 — End 16:00</span>
                 </div>
             </div>
 
-            <div class="flex items-center space-x-3">
+            <div class="flex items-center space-x-2 sm:space-x-3">
                 <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
-                <span class="text-xs text-yellow-600 bg-yellow-100 px-3 py-1 rounded-full">MEETING</span>
+                <span
+                    class="text-[10px] sm:text-xs text-yellow-600 bg-yellow-100 px-2 sm:px-3 py-1 rounded-full">MEETING</span>
             </div>
         </div>
 
         <div class="flex justify-between items-start pl-1">
             <div class="flex items-start">
-                <input type="checkbox" class="form-checkbox h-4 w-4 mt-1 cursor-pointer" />
-                <div class="ml-3">
-                    <p class="text-gray-700 font-medium">Task Kpi Design Department</p>
-                    <span class="text-xs text-gray-500 block">Meeting Hall, Tashkent</span>
-                    <span class="text-xs text-gray-500">Start 15:00 — End 16:00</span>
+                <input type="checkbox" class="form-checkbox h-3 w-3 sm:h-4 sm:w-4 mt-1" />
+                <div class="ml-2 sm:ml-3">
+                    <p class="text-gray-700 font-medium text-sm">Task Kpi Design Department</p>
+                    <span class="text-[10px] sm:text-xs text-gray-500 block">Meeting Hall, Tashkent</span>
+                    <span class="text-[10px] sm:text-xs text-gray-500">Start 15:00 — End 16:00</span>
                 </div>
             </div>
 
-            <span class="w-2 h-2 bg-blue-500 rounded-full mt-2"></span>
+            <span class="w-2 h-2 bg-blue-500 rounded-full mt-1 sm:mt-2"></span>
         </div>
-
     </div>
 </div>

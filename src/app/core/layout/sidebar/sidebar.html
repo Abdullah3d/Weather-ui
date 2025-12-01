@@ -1,11 +1,23 @@
-<div class="flex flex-col w-20 bg-white h-full shadow-lg border-r border-gray-200">
-    <div class="p-3">
+<!-- Mobile Toggle Button -->
+<div class="md:hidden fixed top-3 left-3 z-50">
+    <button id="sidebarToggle" class="bg-white p-2 rounded shadow-lg border">
+        <i class="fas fa-bars text-xl text-gray-700"></i>
+    </button>
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar" class="fixed md:static top-0 left-0 h-full w-20 bg-white shadow-lg border-r border-gray-200
+           transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40 flex flex-col">
+
+    <!-- Profile -->
+    <div class="p-3 flex justify-center">
         <div
             class="w-12 h-12 rounded-full border-2 border-green-500 overflow-hidden bg-gray-100 flex items-center justify-center">
             <img src="https://i.postimg.cc/2654NFNZ/images.jpg" alt="" class="object-cover w-full h-full">
         </div>
     </div>
 
+    <!-- Nav -->
     <nav class="flex-grow space-y-4 pt-8">
         <a routerLink="/dashboard"
             class="flex flex-col items-center justify-center p-2 text-gray-800 border-l-4 border-blue-500 bg-blue-50/50">
@@ -18,16 +30,19 @@
             <i class="fas fa-user-circle text-xl"></i>
             <span class="text-xs mt-1">Accounts</span>
         </a>
+
         <a routerLink="/sales"
             class="flex flex-col items-center justify-center p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-50 transition-colors">
             <i class="fas fa-percent text-xl"></i>
             <span class="text-xs mt-1">Sales</span>
         </a>
+
         <a routerLink="/projects"
             class="flex flex-col items-center justify-center p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-50 transition-colors">
             <i class="fas fa-folder-open text-xl"></i>
             <span class="text-xs mt-1">Projects</span>
         </a>
+
         <a routerLink="/payroll"
             class="flex flex-col items-center justify-center p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-50 transition-colors">
             <i class="fas fa-money-check-alt text-xl"></i>
@@ -35,6 +50,7 @@
         </a>
     </nav>
 
+    <!-- Bottom Items -->
     <div class="p-3 flex justify-center">
         <div class="w-5 h-5 rounded-full bg-pink-500"></div>
     </div>
@@ -43,3 +59,11 @@
     </div>
 
 </div>
+
+<script>
+    // Mobile Sidebar Toggle
+    document.getElementById("sidebarToggle").addEventListener("click", () => {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("-translate-x-full");
+    });
+</script>
